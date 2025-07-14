@@ -1,0 +1,11 @@
+@if (game()) { @let g = game();
+<div class="card-wrapper">
+  @if(g.categories.includes('top') || g.categories.includes('new')){
+  <div class="ribbon">{{ ribbonLabel() }}</div>
+  } @if(g.amount){
+  <div class="jackpot-overlay">{{ g.amount | currency : 'GBP' }}</div>
+  }
+  <img class="image" [src]="g.image" [alt]="g.name" />
+  <button>PLAY {{ g.name }}</button>
+</div>
+}

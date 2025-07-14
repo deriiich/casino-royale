@@ -1,0 +1,23 @@
+.games-container {
+  position: relative;
+  margin-top: 100px;
+  padding: 16px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media only screen and (min-width: 966px) {
+  .games-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin: 100px;
+    justify-content: flex-start;
+  }
+
+  .game {
+    width: 260px;
+  }
+}
